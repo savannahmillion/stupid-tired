@@ -1,0 +1,69 @@
+/**
+ * FONTS
+ */
+$mono: "Courier New", monospace;
+
+/**
+ * COLORS
+ */
+$cDark: #09060E;
+$cLight: #F4F3F0;
+$cMain: #AEC4DA;
+
+/**
+ * TYPOGRAPHY
+ */
+
+ body {
+	font-family: $mono;
+	font-size: 18px;
+	line-height: 22px;
+	color: $cDark;
+	//background-color: $cLight;
+}
+
+.small { font-size: 0.6666667em; }
+
+.left { text-align: left; }
+
+.right { text-align: right; }
+
+.center { text-align: center; }
+
+a {
+	text-decoration: none;
+	position: relative;
+	color: $cDark;
+	&:after {
+		content: "";
+		background-color: transparent;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 10px;
+		transition: background-color .4s ease-in-out, height .2s ease-in-out;
+	}
+	&:hover:after {
+		background-color: $cDark;
+		height: 1px;
+	}
+}
+
+.small a {
+	text-decoration: none;
+	position: relative;
+	color: $cDark;
+	&:after {
+		content: "";
+		background-color: transparent;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 6;
+		transition: background-color .4s ease-in-out, height .2s ease-in-out;
+	}
+	&:hover:after {
+		background-color: $cDark;
+		height: 1px;
+	}
+}

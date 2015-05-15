@@ -1,0 +1,61 @@
+/**
+ * Header
+ */
+
+header {
+	width: 100%;
+	border-bottom: 1px $cDark solid;
+	padding: 20px 0 20px 0;
+	margin-bottom: 30px;
+	nav {
+		float: right;
+		ul {
+			list-style-type: none;
+			a {
+				text-align: right;
+				margin-left: 40px;
+			}
+			li {
+				float: left;
+			}
+		}
+	}
+}
+
+header p {
+	float: left;
+}
+
+/**
+ * Footer
+ */
+
+#twitter {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin: 20px 0px 20px 0px;
+	border: 1px solid $cDark;
+	padding: 5px;
+	&:hover {
+		background-color: $cDark;
+	}
+	&:hover:after {
+		background-color: $cDark;
+		height: 0px;
+	}
+}
+
+#twitter-svg {
+	stroke: $cDark;
+	stroke-width: 3px;
+	stroke-linecap: round;
+	fill: $cLight;
+}
+
+footer {
+	width: 620px;
+	margin: 50px auto 50px auto;
+	border-top: 1px solid $cDark;
+	text-align: center;
+}
