@@ -1,14 +1,14 @@
 /**
  * FONTS
  */
-$mono: "Courier New", monospace;
+$mono: "Fira Mono", "Courier New", monospace;
 
 /**
  * COLORS
  */
-$cDark: #09060E;
-$cLight: #F4F3F0;
-$cMain: #AEC4DA;
+$cDark: #5D5E5F;
+$cMedium: #8C8E8E;
+$cLight: #EAEDEE;
 
 /**
  * TYPOGRAPHY
@@ -16,13 +16,13 @@ $cMain: #AEC4DA;
 
  body {
 	font-family: $mono;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 22px;
 	color: $cDark;
-	//background-color: $cLight;
+	background-color: $cLight;
 }
 
-.small { font-size: 0.6666667em; }
+.small { font-size: 0.875em; }
 
 .left { text-align: left; }
 
@@ -40,12 +40,12 @@ a {
 		width: 100%;
 		position: absolute;
 		left: 0;
-		top: 10px;
+		top: 12px;
 		transition: background-color .4s ease-in-out, height .2s ease-in-out;
 	}
 	&:hover:after {
 		background-color: $cDark;
-		height: 1px;
+		height: 2px;
 	}
 }
 
@@ -59,11 +59,11 @@ a {
 		width: 100%;
 		position: absolute;
 		left: 0;
-		top: 6;
+		top: 10px;
 		transition: background-color .4s ease-in-out, height .2s ease-in-out;
 	}
 	&:hover:after {
 		background-color: $cDark;
-		height: 1px;
+		height: 2px;
 	}
 }

@@ -12,3 +12,5 @@ github_username:  savannahmillion
 
 # Build settings
 markdown: kramdown
+
+paginate: 1

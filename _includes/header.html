@@ -1,5 +1,24 @@
 <header>
   <div class="grid-container">
+    <div class="main-content-container">
+      <h1><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+      <nav>
+        <ul>
+          {% for page in site.pages %}
+            {% if page.title %}
+              <li class="nav-list"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<!--
+<header>
+  <div class="grid-container">
     <div class="grid-100 hcontent">
       <p><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></p>
       <nav>
@@ -14,3 +33,4 @@
     </div>
   </div>
 </header>
+-->
