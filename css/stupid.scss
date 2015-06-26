@@ -8,7 +8,7 @@
 @import "neat/neat";
 @import "partials";
 
-// $medium: new-breakpoint(max-width 1025px 4);
+$medium: new-breakpoint(max-width 1025px 4);
 
 .grid-container {
 	@include outer-container;
