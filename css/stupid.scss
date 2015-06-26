@@ -8,30 +8,46 @@
 @import "neat/neat";
 @import "partials";
 
-$medium: new-breakpoint(max-width 1025px 4);
+$medium: new-breakpoint(max-width 790px 6);
+$small: new-breakpoint(max-width 520px 4);
+$tiny: new-breakpoint(max-width 310px 1);
 
 .grid-container {
 	@include outer-container;
-	// @include media($medium) {
- //      @include span-columns(4);
- //    }
 }
 
 .main-content-container {
 	@include span-columns(8);
 	@include shift(2);
-	// @include media($medium) {
- //      @include span-columns(4);
- //    }
- //}
+	@include media($medium) {
+      @include span-columns(6);
+      @include shift(0);
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include media($small) {
+      @include span-columns(4);
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include media($tiny) {
+    	@include span-columns(1);
+    }
 }
 
 .comic-post {
 	@include span-columns(6);
 	@include shift(3);
-	// @include media($medium) {
- //      @include span-columns(8);
- //    }
+	@include media($medium) {
+      @include span-columns(4);
+      @include shift(1);
+    }
+    @include media($small) {
+      @include span-columns(4);
+      @include shift(0);
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 }
 
 .title {
@@ -62,6 +78,17 @@ img.comic {
 .pagination {
 	@include span-columns(8);
 	@include shift(2);
+	@include media($medium) {
+      @include span-columns(6);
+      @include shift(0);
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include media($small) {
+      @include span-columns(4);
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 	margin-top: 35px;
 	margin-bottom: 35px;
 	height: 25px;
@@ -72,5 +99,29 @@ img.comic {
 			width: 25%;
 		}
 	}
+}
+
+.unavailable {
+	a {
+		color: tint($cMedium, 40%);
+		cursor: default;
+		&:after {
+			content: "";
+			height: 2px;
+			background-color: tint($cMedium, 40%);
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 10px;
+			transition: background-color .4s ease-in-out, height .2s ease-in-out;
+		}
+		&:hover:after {
+			background-color: tint($cMedium, 40%);
+		}
+	}
+}
+
+.page-ids {
+	@include span-columns(12);
 }
 
