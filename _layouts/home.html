@@ -11,24 +11,35 @@
 
 			<div class="pagination small">
 				<ul>
-					<li class="left"><a href="#">&laquo; first</a></li>
-						<li class="left"><a href="#">&lsaquo; prev</a></li>
-					<li class="right"><a href="#">next &rsaquo;</a></li>
-					<li class="right"><a href="#">last &raquo;</a></li>
+					{% if page.id == site.posts.last.id %}
+						<li class="left unavailable"><a href="#">&laquo; oldest</a></li>
+						<li class="left unavailable"><a href="#">&lsaquo; prev</a></li>
+					{% else %}
+						<li class="left"><a href="{{ site.posts.last.url }}">&laquo; oldest</a></li>
+						<li class="left"><a href="{{ page.previous }}">&lsaquo; prev</a></li>
+					{% endif %}
+
+					{% if page.id == site.posts.first.id %}
+						<li class="right unavailable"><a href="#">next &rsaquo;</a></li>
+						<li class="right unavailable"><a href="#">latest &rsaquo;</a></li>
+						{% else %}
+						<li class="right"><a href="{{ site.posts.first.url }}">next &rsaquo;</a></li>
+						<li class="right"><a href="{{ site.posts[1].url }}">latest &raquo;</a></li>
+					{% endif %}
 				</ul>
 			</div>
 
-			{% for post in site.posts %}
+			
 			<article class="comic-post">
-				<p class="title">{{ post.title }}</p>
-				<p class="date">{{ post.date | date: "%m.%-d.%Y" }}</p>
-				<img class="comic" src="{{ post.comic }}">
+				<p class="title">{{ site.posts[0].title }}</p>
+				<p class="date">{{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
+				<img class="comic" src="{{ site.posts[0].comic }}">
 				<div class="comic-comment">
-					<p class="small">{{ post.title }} // {{ post.date | date: "%m.%-d.%Y" }}</p>
-					<p>{{ post.excerpt }}</p>
+					<p class="small">{{ site.posts[0].title }} // {{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
+					<p>{{ site.posts[0].excerpt }}</p>
 				</div>
 			</article>
-			{% endfor %}
+
 
 			<div class="pagination small">
 				<ul>

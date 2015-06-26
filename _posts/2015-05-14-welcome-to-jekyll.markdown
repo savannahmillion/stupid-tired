@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "I'm not the first post ever!"
 date:   2015-05-14 10:42:38
 categories: jekyll update
 comic: comics/aziz-example-comic.jpg
