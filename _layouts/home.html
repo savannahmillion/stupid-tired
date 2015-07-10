@@ -6,11 +6,11 @@ layout: default
 	{% include pagination.html %}
 
 	<article class="comic-post">
-		<p class="title">{{ site.posts[0].title }}</p>
+		<p class="title"><a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a></p>
 		<p class="date">{{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
 		<img class="comic" src="{{ site.posts[0].comic }}">
 		<div class="comic-comment">
-			<p class="small">{{ site.posts[0].title }} // {{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
+			<p class="small"><a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a> // {{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
 			<p>{{ site.posts[0].excerpt }}</p>
 		</div>
 	</article>

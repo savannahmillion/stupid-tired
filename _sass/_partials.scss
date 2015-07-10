@@ -31,10 +31,13 @@ header {
  */
 
 footer {
-	width: 100%;
-	border-top: 2px solid $cDark;
-	background-color: shade($cLight, 20%);
+	//border-top: 2px solid $cDark;
+	//background-color: shade($cLight, 20%);
 	padding: 20px 0px 100px 0px;
 	margin-top: 50px;
 	text-align: center;
+	.footer-content {
+		border-top: 2px solid $cDark;
+		padding: 50px 0px 50px 0px;
+	}
 }
