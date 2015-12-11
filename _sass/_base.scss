@@ -1,69 +1,70 @@
-/**
- * FONTS
- */
-$mono: "Courier New", monospace;
+//
+// Fonts
+//
+$mono: "Fira Mono", "Courier New", monospace;
 
-/**
- * COLORS
- */
-$cDark: #09060E;
-$cLight: #F4F3F0;
-$cMain: #AEC4DA;
+//
+// Colors
+//
+$cDarkest: #444444;
+$cDark: #888787;
+$cMedium: #CCCBCB;
+$cLight: #ECEDED;
+$cLightest: #FAFAFA;
 
-/**
- * TYPOGRAPHY
- */
+//
+// Spacing
+//
+$base-spacing: 1em;
+$small-spacing: 1em / 2;
+$large-spacing: 1em * 2;
 
- body {
+//
+// Transitions
+//
+$base-transition: all 0.3s ease;
+
+//
+// Breakpoints
+//
+$large: new-breakpoint(max-width 1170px 12);
+$medium: new-breakpoint(max-width 790px 6);
+$small: new-breakpoint(max-width 520px 4);
+$tiny: new-breakpoint(max-width 310px 1);
+
+//
+// Type
+//
+body {
 	font-family: $mono;
-	font-size: 18px;
-	line-height: 22px;
 	color: $cDark;
-	//background-color: $cLight;
+  font-size: 1em;
+  line-height: 1.15em;
 }
 
-.small { font-size: 0.6666667em; }
+p { font-size: 0.875rem; }
+small { font-size: 0.775em; }
+h1 { font-size: 2.25em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 0.875em; }
+h5 { font-size: 0.775em; }
 
-.left { text-align: left; }
-
-.right { text-align: right; }
-
-.center { text-align: center; }
+p,h1,h2,h3,h4,h5 {
+  margin-bottom: $base-spacing;
+}
 
 a {
 	text-decoration: none;
-	position: relative;
-	color: $cDark;
-	&:after {
-		content: "";
-		background-color: transparent;
-		width: 100%;
-		position: absolute;
-		left: 0;
-		top: 10px;
-		transition: background-color .4s ease-in-out, height .2s ease-in-out;
-	}
-	&:hover:after {
+	color: $cDarkest;
+  transition: $base-transition;
+
+	&:hover, &:active, &:focus {
+    color: $cLight;
 		background-color: $cDark;
-		height: 1px;
 	}
 }
 
-.small a {
-	text-decoration: none;
-	position: relative;
-	color: $cDark;
-	&:after {
-		content: "";
-		background-color: transparent;
-		width: 100%;
-		position: absolute;
-		left: 0;
-		top: 6;
-		transition: background-color .4s ease-in-out, height .2s ease-in-out;
-	}
-	&:hover:after {
-		background-color: $cDark;
-		height: 1px;
-	}
+ul li {
+  margin-bottom: $base-spacing;
 }

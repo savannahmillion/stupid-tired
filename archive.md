@@ -1,9 +1,5 @@
 ---
-layout: page
+layout: page-archive
 title: archive
 permalink: /archive/
 ---
-
-this is the archive
-
-{{ site.posts }}

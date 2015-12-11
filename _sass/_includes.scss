@@ -1,0 +1,103 @@
+//
+// Header
+//
+header {
+	@include span-columns(3);
+
+  text-align: right;
+  margin-top: $base-spacing;
+  border-right: 2px solid $cMedium;
+  padding-right: $base-spacing;
+
+	nav ul {
+		list-style-type: none;
+    li {
+      margin-bottom: $small-spacing;
+    }
+  }
+
+  @include media($large) {
+    @include span-columns(3);
+  }
+
+  @include media($medium) {
+    @include span-columns(4);
+    @include shift(1);
+
+    text-align: center;
+    border-right-width: 0px;
+    padding-right: 0px;
+
+    border-bottom: 2px solid $cMedium;
+    padding-bottom: $base-spacing;
+
+    nav ul li {
+      display: inline-block;
+    }
+  }
+
+  @include media($small) {
+    @include span-columns(4);
+    @include shift(0);
+    margin-left: $small-spacing;
+    margin-right: $small-spacing;
+  }
+}
+
+//
+// Footer
+//
+footer {
+  @include span-columns(6);
+  @include shift(3);
+
+  text-align: center;
+  border-top: 2px solid $cMedium;
+  margin-top: $large-spacing;
+  margin-bottom: $large-spacing;
+  padding: $base-spacing 0 0 $base-spacing;
+
+  @include media($large) {
+    @include span-columns(6);
+    @include shift(3);
+  }
+
+  @include media($medium) {
+    @include span-columns(4);
+    @include shift(1);
+  }
+}
+
+//
+// Pagination
+//
+.pagination {
+	@include span-columns(6);
+	@include shift(3);
+
+  margin-top: $base-spacing;
+
+  ul {
+    list-style-type: none;
+    li {
+      display: block;
+      text-align: center;
+      @include span-columns(3);
+      @include omega(4n);
+    }
+  }
+
+  @include media($large) {
+    @include span-columns(6);
+  }
+
+  @include media($medium) {
+    @include span-columns(4);
+    @include shift(1);
+  }
+
+  @include media($small) {
+    @include span-columns(4);
+    @include shift(0);
+  }
+}

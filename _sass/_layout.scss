@@ -1,0 +1,69 @@
+//
+// Layout
+//
+body {
+  @include outer-container;
+  background-color: $cLight;
+}
+
+.comic-post, article {
+	@include span-columns(6);
+
+  @include media($large) {
+    @include span-columns(6);
+  }
+
+	@include media($medium) {
+    @include span-columns(4);
+    @include shift(1);
+  }
+
+  @include media($small) {
+    @include span-columns(4);
+    @include shift(0);
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+  }
+}
+
+article { margin-top: $base-spacing; }
+
+.comic-data {
+  @include row();
+}
+
+.title, .date {
+  @include span-columns(6);
+  @include omega(2n);
+}
+
+.date { text-align: right; }
+
+img.comic {
+	width: 100%;
+	height: auto;
+	margin: $small-spacing 0 $large-spacing;
+	box-shadow: 0px 2px 4px rgba(93, 94, 95, 0.6);
+	background-color: white;
+}
+
+.comic-comment {
+	padding: $base-spacing 0 $small-spacing 0;
+	border-top: 2px solid $cMedium;
+	border-bottom: 2px solid $cMedium;
+}
+
+.unavailable {
+	a {
+		color: tint($cMedium, 20%);
+		cursor: default;
+
+		&:hover {
+			background-color: inherit;
+		}
+	}
+}
+
+// .page-ids {
+// 	@include span-columns(12);
+// }

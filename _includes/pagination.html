@@ -1,0 +1,31 @@
+<div class="pagination">
+	<ul>
+		<!-- This is for the homepage only -->
+		{% if page.url == '/index.html' %}
+
+			<li><small><a href="{{ site.posts.last.url }}">&laquo; oldest</a></small></li>
+			<li><small><a href="{{ site.posts[1].url }}">&lsaquo; prev</a></small></li>
+
+			<li class="unavailable"><small><a href="">next &rsaquo;</a></small></li>
+			<li class="unavailable"><small><a href="">latest &rsaquo;</a></small></li>
+
+		<!-- This is for the post pages only -->
+		{% else %}
+			{% if page.id == site.posts.last.id %}
+				<li class="unavailable"><small><a href="">&laquo; oldest</a></small></li>
+				<li class="unavailable"><small><a href="">&lsaquo; prev</a></small></li>
+			{% else %}
+				<li><small><a href="{{ site.posts.last.url }}">&laquo; oldest</a></small></li>
+				<li><small><a href="{{ page.previous.url }}">&lsaquo; prev</a></small></li>
+			{% endif %}
+
+			{% if page.id == site.posts.first.id %}
+				<li class="unavailable"><small><a href="">next &rsaquo;</a></small></li>
+				<li class="unavailable"><small><a href="">latest &rsaquo;</a></small></li>
+				{% else %}
+				<li><small><a href="{{ page.next.url }}">next &rsaquo;</a></small></li>
+				<li><small><a href="{{ site.posts.first.url }}">latest &raquo;</a></small></li>
+			{% endif %}
+		{% endif %}
+	</ul>
+</div>

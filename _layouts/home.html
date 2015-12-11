@@ -1,44 +1,29 @@
+---
+layout: default
+---
 
-<!DOCTYPE html>
-<html lang="en">
+<article class="comic-post">
+  <div class="comic-data">
+    <div class="title">
+      <p><a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a></p>
+    </div>
+    <div class="date">
+      <p>{{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
+    </div>
+  </div>
 
-		{% include head.html %}
+	<img class="comic" src="{{ site.posts[0].comic }}">
+	<div class="comic-comment">
+    <div class="comic-data">
+      <div class="title">
+        <p><a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a></p>
+      </div>
+      <div class="date">
+        <p>{{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
+      </div>
+    </div>
+		<p>{{ site.posts[0].excerpt }}</p>
+	</div>
+</article>
 
-	<body>
-
-		{% include header.html %}
-
-		<div class="page-content grid-container">
-
-			<div class="pagination small">
-				<ul>
-					<li class="left"><a href="#">&laquo; first</a></li>
-					<li class="left"><a href="#">&lsaquo; prev</a></li>
-					<li class="right"><a href="#">next &rsaquo;</a></li>
-					<li class="right"><a href="#">last &raquo;</a></li>
-				</ul>
-			</div>
-			<article class="comic-post">
-				<p class="small">03.15.2015 &mdash; "this is the comic title"</p>
-				<img class="comic" src="#">
-				<div class="comic-comment">
-					<img class="avatar" src="#">
-					<p class="small">03.15.2015</p>
-					<p>this is the comment regarding the comic in the above image</p>
-				</div>
-			</article>
-			<div class="pagination small">
-				<ul>
-					<li class="left"><a href="#">&laquo; first</a></li>
-					<li class="left"><a href="#">&lsaquo; prev</a></li>
-					<li class="right"><a href="#">next &rsaquo;</a></li>
-					<li class="right"><a href="#">last &raquo;</a></li>
-				</ul>
-			</div>
-<!-- 			
-			{% include footer.html %}
-
-		</div>
-	</body>
-</html>
- -->
+{% include pagination.html %}
