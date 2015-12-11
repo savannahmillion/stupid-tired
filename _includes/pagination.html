@@ -1,30 +1,30 @@
-<div class="pagination small">
+<div class="pagination">
 	<ul>
 		<!-- This is for the homepage only -->
 		{% if page.url == '/index.html' %}
 
-			<li class="left"><a href="{{ site.posts.last.url }}">&laquo; oldest</a></li>
-			<li class="left"><a href="{{ site.posts[1].url }}">&lsaquo; prev</a></li>
+			<li><small><a href="{{ site.posts.last.url }}">&laquo; oldest</a></small></li>
+			<li><small><a href="{{ site.posts[1].url }}">&lsaquo; prev</a></small></li>
 
-			<li class="right unavailable"><a href="">next &rsaquo;</a></li>
-			<li class="right unavailable"><a href="">latest &rsaquo;</a></li>
+			<li class="unavailable"><small><a href="">next &rsaquo;</a></small></li>
+			<li class="unavailable"><small><a href="">latest &rsaquo;</a></small></li>
 
 		<!-- This is for the post pages only -->
 		{% else %}
 			{% if page.id == site.posts.last.id %}
-				<li class="left unavailable"><a href="">&laquo; oldest</a></li>
-				<li class="left unavailable"><a href="">&lsaquo; prev</a></li>
+				<li class="unavailable"><small><a href="">&laquo; oldest</a></small></li>
+				<li class="unavailable"><small><a href="">&lsaquo; prev</a></small></li>
 			{% else %}
-				<li class="left"><a href="{{ site.posts.last.url }}">&laquo; oldest</a></li>
-				<li class="left"><a href="{{ page.previous.url }}">&lsaquo; prev</a></li>
+				<li><small><a href="{{ site.posts.last.url }}">&laquo; oldest</a></small></li>
+				<li><small><a href="{{ page.previous.url }}">&lsaquo; prev</a></small></li>
 			{% endif %}
 
 			{% if page.id == site.posts.first.id %}
-				<li class="right unavailable"><a href="">next &rsaquo;</a></li>
-				<li class="right unavailable"><a href="">latest &rsaquo;</a></li>
+				<li class="unavailable"><small><a href="">next &rsaquo;</a></small></li>
+				<li class="unavailable"><small><a href="">latest &rsaquo;</a></small></li>
 				{% else %}
-				<li class="right"><a href="{{ page.next.url }}">next &rsaquo;</a></li>
-				<li class="right"><a href="{{ site.posts.first.url }}">latest &raquo;</a></li>
+				<li><small><a href="{{ page.next.url }}">next &rsaquo;</a></small></li>
+				<li><small><a href="{{ site.posts.first.url }}">latest &raquo;</a></small></li>
 			{% endif %}
 		{% endif %}
 	</ul>

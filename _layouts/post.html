@@ -1,20 +1,29 @@
 ---
 layout: default
 ---
-<div class="grid-container">
 
-	{% include pagination.html %}
+<article class="comic-post">
+  <div class="comic-data">
+    <div class="title">
+      <p><a href="{{ page.url }}">{{ page.title }}</a></p>
+    </div>
+  	<div class="date">
+      <p>{{ page.date | date: "%m.%-d.%Y" }}</p>
+    </div>
+  </div>
 
-	<article class="comic-post">
-		<p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
-		<p class="date">{{ page.date | date: "%m.%-d.%Y" }}</p>
-		<img class="comic" src="{{ site.url }}/{{ page.comic }}">
-		<div class="comic-comment">
-			<p class="small"><a href="{{ page.url }}">{{ page.title }}</a> // {{ page.date | date: "%m.%-d.%Y" }}</p>
-			<p>{{ page.excerpt }}</p>
-		</div>
-	</article>
+	<img class="comic" src="{{ page.comic }}">
+	<div class="comic-comment">
+    <div class="comic-data">
+      <div class="title">
+        <p class="small"><a href="{{ page.url }}">{{ page.title }}</a></p>
+      </div>
+      <div class="date">
+        <p>{{ page.date | date: "%m.%-d.%Y" }}</p>
+      </div>
+    </div>
+		<p>{{ page.excerpt }}</p>
+	</div>
+</article>
 
-	{% include pagination.html %}
-	
-</div>
+{% include pagination.html %}
