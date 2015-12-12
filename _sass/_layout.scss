@@ -64,6 +64,18 @@ img.comic {
 	}
 }
 
-// .page-ids {
-// 	@include span-columns(12);
-// }
+.tags {
+  background-color: #fff;
+  padding: $base-spacing;
+  font-size: 0.7em;
+  margin-bottom: $small-spacing;
+  ul li {
+    display: inline-block;
+    background-color: $cLight;
+    padding: $small-spacing;
+    a:hover {
+      color: $cMedium;
+      background-color: inherit;
+    }
+  }
+}
