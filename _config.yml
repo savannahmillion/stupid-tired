@@ -14,4 +14,4 @@ github_username:  savannahmillion
 markdown: kramdown
 
 # Post settings
-permalink: :title
+permalink: /:title/
