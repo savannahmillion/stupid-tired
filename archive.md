@@ -1,5 +1,5 @@
 ---
 layout: page-archive
 title: archive
-permalink: /archive/
+permalink: archive
 ---
