@@ -1,7 +1,7 @@
 ---
 layout: page
 title: about
-permalink: about
+permalink: /about/
 ---
 
 hello, I am savannah, an internet designer residing in chicago. I draw the stuff for this site.
