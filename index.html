@@ -27,7 +27,7 @@ layout: default
       <p>tags</p>
       <ul class="post-tag-list">
         {% for tag in site.posts.[0].tags %}
-        <li class="inline archive_list"><a class="tag_list_link" href="/tag/{{ tag }}">{{ tag }}</a></li>
+        <li class="inline archive_list"><a class="tag_list_link" href="{{ prepend: site.baseurl | prepend: site.url }}/tag/{{ tag }}">{{ tag }}</a></li>
         {% endfor %}
       </ul>
     </div>
