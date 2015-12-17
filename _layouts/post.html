@@ -5,7 +5,7 @@ layout: default
 <article class="comic-post">
   <div class="comic-data">
     <div class="title">
-      <p><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></p>
+      <p><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></p>
     </div>
   	<div class="date">
       <p>{{ page.date | date: "%m.%-d.%Y" }}</p>
@@ -16,7 +16,7 @@ layout: default
 	<div class="comic-comment">
     <div class="comic-data">
       <div class="title">
-        <p class="small"><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></p>
+        <p class="small"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></p>
       </div>
       <div class="date">
         <p>{{ page.date | date: "%m.%-d.%Y" }}</p>
@@ -27,7 +27,7 @@ layout: default
       <p>tags</p>
       <ul class="post-tag-list">
         {% for tag in page.tags %}
-        <li class="inline archive_list"><a class="tag_list_link" href="{{ prepend: site.baseurl | prepend: site.url }}/tag/{{ tag }}">{{ tag }}</a></li>
+        <li class="inline archive_list"><a class="tag_list_link" href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a></li>
         {% endfor %}
       </ul>
     </div>
