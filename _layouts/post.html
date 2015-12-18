@@ -23,6 +23,8 @@ layout: default
       </div>
     </div>
 		<p>{{ page.excerpt }}</p>
+
+    {% if page.tags.size > 1 %}
     <div class="tags">
       <p>tags</p>
       <ul class="post-tag-list">
@@ -31,6 +33,8 @@ layout: default
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
+
 	</div>
 </article>
 

@@ -26,7 +26,10 @@ body {
   }
 }
 
-article { margin-top: $base-spacing; }
+article {
+  margin-top: $base-spacing;
+  min-height: 165px;
+}
 
 .comic-data {
   @include row();
