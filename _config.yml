@@ -5,8 +5,8 @@ description: > # this means to ignore newlines until "baseurl:"
   a webcomic<br />
   updates thrice weekly<br />
   cognizance permitting
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+baseurl: "/stupid-tired" # the subpath of your site, e.g. /blog/
+url: "http://savannahmillion.github.io" # the base hostname & protocol for your site
 twitter_username: savannahmillion
 github_username:  savannahmillion
 
@@ -14,4 +14,4 @@ github_username:  savannahmillion
 markdown: kramdown
 
 # Post settings
-permalink: /:title/
+permalink: :title/
