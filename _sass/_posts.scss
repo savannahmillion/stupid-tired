@@ -1,0 +1,54 @@
+//
+// Post Markdown Design
+//
+.post-content {
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: $base-spacing;
+    padding: $small-spacing;
+    border: 1px solid $cMedium;
+  }
+
+  ul {
+    font-size: 0.875rem;
+    margin-bottom: $base-spacing;
+
+    li {
+      margin-bottom: $small-spacing;
+      &:before {
+        content: "\2022";
+        margin-right: $small-spacing;
+        color: $cMedium;
+      }
+    }
+  }
+
+  ol {
+    font-size: 0.875rem;
+    margin-bottom: $base-spacing;
+    counter-reset: li;
+
+    li {
+      counter-increment: li;
+      margin-bottom: $small-spacing;
+      &:before {
+        content: counter(li) '. ';
+        color: $cMedium;
+      }
+    }
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  blockquote {
+    padding-left: $small-spacing;
+    border-left: 2px solid $cMedium;
+    font-style: italic;
+    margin-bottom: $base-spacing;
+  }
+
+}

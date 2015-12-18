@@ -22,7 +22,8 @@ layout: default
         <p>{{ site.posts[0].date | date: "%m.%-d.%Y" }}</p>
       </div>
     </div>
-		<p>{{ site.posts[0].excerpt }}</p>
+		<div class="post-content">{{ site.posts[0].content }}</div>
+    {% if page.tags.size > 1 %}
     <div class="tags">
       <p>tags</p>
       <ul class="post-tag-list">
@@ -31,6 +32,7 @@ layout: default
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
 	</div>
 </article>
 
