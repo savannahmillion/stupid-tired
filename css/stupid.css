@@ -1,0 +1,363 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Fira Mono", "Courier New", monospace;
+  color: #888787;
+  font-size: 1em;
+  line-height: 1.15em; }
+
+p {
+  font-size: 0.875rem; }
+
+small {
+  font-size: 0.775em; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 1.25em; }
+
+h4 {
+  font-size: 0.875em; }
+
+h5 {
+  font-size: 0.775em; }
+
+p, h1, h2, h3, h4, h5 {
+  margin-bottom: 1em; }
+
+a {
+  text-decoration: none;
+  color: #444444;
+  transition: all 0.3s ease; }
+  a:hover, a:active, a:focus {
+    color: #ECEDED;
+    background-color: #888787; }
+
+ul li {
+  margin-bottom: 1em; }
+
+header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  text-align: right;
+  margin-top: 1em;
+  border-right: 2px solid #CCCBCB;
+  padding-right: 1em; }
+  header:last-child {
+    margin-right: 0; }
+  header nav ul {
+    list-style-type: none; }
+    header nav ul li {
+      margin-bottom: 0.5em; }
+  @media screen and (max-width: 1170px) {
+    header {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      header:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 790px) {
+    header {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 65.05695%;
+      margin-left: 17.47153%;
+      text-align: center;
+      border-right-width: 0px;
+      padding-right: 0px;
+      border-bottom: 2px solid #CCCBCB;
+      padding-bottom: 1em; }
+      header:last-child {
+        margin-right: 0; }
+      header nav ul li {
+        display: inline-block; } }
+  @media screen and (max-width: 520px) {
+    header {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%;
+      margin-left: 0%;
+      margin-left: 0.5em;
+      margin-right: 0.5em; }
+      header:last-child {
+        margin-right: 0; } }
+
+footer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
+  text-align: center;
+  border-top: 2px solid #CCCBCB;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em 0 0 1em; }
+  footer:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 1170px) {
+    footer {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 25.58941%; }
+      footer:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 790px) {
+    footer {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 65.05695%;
+      margin-left: 17.47153%; }
+      footer:last-child {
+        margin-right: 0; } }
+
+.pagination {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
+  margin-top: 1em; }
+  .pagination:last-child {
+    margin-right: 0; }
+  .pagination ul {
+    list-style-type: none; }
+    .pagination ul li {
+      display: block;
+      text-align: center;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .pagination ul li:last-child {
+        margin-right: 0; }
+      .pagination ul li:nth-child(4n) {
+        margin-right: 0; }
+      .pagination ul li:nth-child(4n+1) {
+        clear: left; }
+  @media screen and (max-width: 1170px) {
+    .pagination {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .pagination:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 790px) {
+    .pagination {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 65.05695%;
+      margin-left: 17.47153%; }
+      .pagination:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 520px) {
+    .pagination {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%;
+      margin-left: 0%; }
+      .pagination:last-child {
+        margin-right: 0; } }
+
+body {
+  max-width: 64.0625em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ECEDED; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.comic-post, article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .comic-post:last-child, article:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 1170px) {
+    .comic-post, article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .comic-post:last-child, article:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 790px) {
+    .comic-post, article {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 65.05695%;
+      margin-left: 17.47153%; }
+      .comic-post:last-child, article:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 520px) {
+    .comic-post, article {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%;
+      margin-left: 0%;
+      padding-left: 0.5em;
+      padding-right: 0.5em; }
+      .comic-post:last-child, article:last-child {
+        margin-right: 0; } }
+
+article {
+  margin-top: 1em;
+  min-height: 165px; }
+
+.comic-data {
+  display: block; }
+  .comic-data::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.title, .date {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .title:last-child, .date:last-child {
+    margin-right: 0; }
+  .title:nth-child(2n), .date:nth-child(2n) {
+    margin-right: 0; }
+  .title:nth-child(2n+1), .date:nth-child(2n+1) {
+    clear: left; }
+
+.date {
+  text-align: right; }
+
+img.comic {
+  width: 100%;
+  height: auto;
+  margin: 0.5em 0 2em;
+  box-shadow: 0px 2px 4px rgba(93, 94, 95, 0.6);
+  background-color: white; }
+
+.comic-comment {
+  padding: 1em 0 0.5em 0;
+  border-top: 2px solid #CCCBCB;
+  border-bottom: 2px solid #CCCBCB; }
+
+.unavailable a {
+  color: #d6d5d5;
+  cursor: default; }
+  .unavailable a:hover {
+    background-color: inherit; }
+
+.tags {
+  background-color: #fff;
+  padding: 1em;
+  font-size: 0.7em;
+  margin-bottom: 0.5em; }
+  .tags ul li {
+    display: inline-block;
+    background-color: #ECEDED;
+    padding: 0.5em; }
+    .tags ul li a:hover {
+      color: #CCCBCB;
+      background-color: inherit; }
+
+.post-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #CCCBCB; }
+.post-content ul {
+  font-size: 0.875rem;
+  margin-bottom: 1em; }
+  .post-content ul li {
+    margin-bottom: 0.5em; }
+    .post-content ul li:before {
+      content: "\2022";
+      margin-right: 0.5em;
+      color: #CCCBCB; }
+.post-content ol {
+  font-size: 0.875rem;
+  margin-bottom: 1em;
+  counter-reset: li; }
+  .post-content ol li {
+    counter-increment: li;
+    margin-bottom: 0.5em; }
+    .post-content ol li:before {
+      content: counter(li) ". ";
+      color: #CCCBCB; }
+.post-content em {
+  font-style: italic; }
+.post-content blockquote {
+  padding-left: 0.5em;
+  border-left: 2px solid #CCCBCB;
+  font-style: italic;
+  margin-bottom: 1em; }
